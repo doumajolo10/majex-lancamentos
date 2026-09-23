@@ -13,14 +13,14 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231F7A4D'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'>fx</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#F6F8F5; --paper:#FFFFFF; --ink:#0E1A14; --soft:#4F5F57; --line:#DDE5DF;
   --dark:#0F2A1E; --dark2:#143726; --verde:#1F7A4D; --verde-d:#155C39; --neon:#3DDC84;
   --amarelo:#FFF2B3; --amarelo-b:#E8C84A; --vermelho:#B42323; --vermelho-bg:#FDECEC;
   --ease:cubic-bezier(.22,1,.36,1);
-  --fs:"Inter",system-ui,-apple-system,sans-serif; --fm:"JetBrains Mono",ui-monospace,monospace;
+  --fs:"Archivo",system-ui,-apple-system,sans-serif; --fm:"JetBrains Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -33,7 +33,7 @@ button{font:inherit;color:inherit}
 .narrow{max-width:780px;margin:0 auto}
 .center{text-align:center}
 section{position:relative}
-h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-.025em;font-weight:800}
+h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-.025em;font-weight:800;font-stretch:108%}
 h1{font-size:clamp(34px,5.8vw,62px);font-weight:900}
 h2{font-size:clamp(28px,4.2vw,44px)}
 h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
@@ -52,7 +52,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
 
 /* nav */
 .nav{position:fixed;top:37px;left:0;right:0;z-index:50;padding:12px 0;transition:background .35s var(--ease),border-color .35s;border-bottom:1px solid transparent}
-.nav.is-stuck{background:rgba(15,42,30,.92);backdrop-filter:blur(12px);border-bottom-color:rgba(255,255,255,.08)}
+.nav.is-stuck{background:#0F2A1E;border-bottom-color:rgba(255,255,255,.08)}
 .nav__in{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:16px;letter-spacing:-.01em}
 .brand__b{width:32px;height:32px;border-radius:7px;background:var(--verde);display:grid;place-items:center;font-family:var(--fm);font-size:13px;font-weight:600;color:#fff;border:1px solid rgba(255,255,255,.18)}
@@ -397,7 +397,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
   <div class="wrap">
     <div class="center">
       <span class="tag r">O que você recebe</span>
-      <h2 class="r" data-d="1">Um guia de 49 páginas e uma pasta de planilhas prontas</h2>
+      <h2 class="r" data-d="1">Um guia de 48 páginas e uma pasta de planilhas prontas</h2>
     </div>
     <div class="big">
       <div class="card r">
@@ -519,7 +519,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
     <div class="plan r" style="text-align:left">
       <span class="plan__tag">Acesso imediato</span>
       <ul>
-        <li><b>Guia Excel no Piloto Automático</b> (PDF, 49 páginas)</li>
+        <li><b>Guia Excel no Piloto Automático</b> (PDF, 48 páginas)</li>
         <li><b>120 prompts</b> em 13 capítulos, com a fórmula esperada</li>
         <li><b>Arquivo Word</b> com os 120 prompts para copiar</li>
         <li><b>12 planilhas prontas</b> (.xlsx) com aba “Como usar”</li>

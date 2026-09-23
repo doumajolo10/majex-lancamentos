@@ -1,0 +1,4 @@
+// Servidor local das 3 landings: node majex-produtos/sites/serve.js -> http://localhost:8770/excel/ (app/, conta/)
+const http=require('http'),fs=require('fs'),path=require('path');
+const ROOT=__dirname; const T={'.html':'text/html; charset=utf-8','.jpg':'image/jpeg','.png':'image/png','.css':'text/css','.js':'text/javascript','.webp':'image/webp','.svg':'image/svg+xml','.ico':'image/x-icon'};
+http.createServer((q,r)=>{ let p=decodeURIComponent(q.url.split('?')[0]); if(p.endsWith('/')) p+='index.html'; const f=path.join(ROOT,p); if(!f.startsWith(ROOT)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){ r.writeHead(404); return r.end('nao encontrado'); } r.writeHead(200,{'Content-Type':T[path.extname(f)]||'application/octet-stream'}); fs.createReadStream(f).pipe(r); }).listen(8770,()=>console.log('http://localhost:8770'));

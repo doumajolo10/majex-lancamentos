@@ -268,8 +268,8 @@ var META_PIXEL = "";
   document.querySelectorAll(".fq__q").forEach(function(b){
     b.addEventListener("click", function(){
       var it = b.parentElement, pn = it.querySelector(".fq__a"), aberto = it.classList.contains("is-open");
-      document.querySelectorAll(".fq.is-open").forEach(function(o){ o.classList.remove("is-open"); o.querySelector(".fq__a").style.maxHeight = null; });
-      if(!aberto){ it.classList.add("is-open"); pn.style.maxHeight = pn.scrollHeight + "px"; }
+      document.querySelectorAll(".fq.is-open").forEach(function(o){ o.classList.remove("is-open"); });
+      if(!aberto) it.classList.add("is-open");
     });
   });
 

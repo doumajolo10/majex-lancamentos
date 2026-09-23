@@ -225,8 +225,11 @@ h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.015em}
 .fq__q{width:100%;background:none;border:0;text-align:left;padding:18px 50px 18px 20px;cursor:pointer;font-size:16px;font-weight:600;position:relative;line-height:1.35}
 .fq__q::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--rosa);font-size:24px;transition:transform .35s var(--ease)}
 .fq.is-open .fq__q::after{transform:translateY(-50%) rotate(45deg)}
-.fq__a{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
-.fq__a p{margin:0 20px 18px;color:var(--soft);font-size:15px}
+.fq__a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.fq__a>*{overflow:hidden;min-height:0}
+.fq.is-open .fq__a{grid-template-rows:1fr}
+.fq__a p{margin:0;padding:0 20px;color:var(--soft);font-size:15px}
+.fq__a p::after{content:"";display:block;height:18px}
 
 .final{padding:100px 0;background:var(--roxo);text-align:center;overflow:hidden}
 .final h2{max-width:20ch;margin:0 auto 14px}
@@ -564,8 +567,8 @@ var META_PIXEL = "";
   document.querySelectorAll(".fq__q").forEach(function(b){
     b.addEventListener("click", function(){
       var it = b.parentElement, pn = it.querySelector(".fq__a"), aberto = it.classList.contains("is-open");
-      document.querySelectorAll(".fq.is-open").forEach(function(o){ o.classList.remove("is-open"); o.querySelector(".fq__a").style.maxHeight = null; });
-      if(!aberto){ it.classList.add("is-open"); pn.style.maxHeight = pn.scrollHeight + "px"; }
+      document.querySelectorAll(".fq.is-open").forEach(function(o){ o.classList.remove("is-open"); });
+      if(!aberto) it.classList.add("is-open");
     });
   });
 

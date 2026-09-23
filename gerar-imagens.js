@@ -18,7 +18,7 @@ const png = (nome) => url(path.join(TMP, `${nome}.png`));
 
 /* páginas de cada PDF que viram imagem */
 const PAGINAS = {
-  excel: ['excel-ia/entrega/Excel-no-Piloto-Automatico.pdf', [1, 2, 5, 6, 40]],
+  excel: ['excel-ia/entrega/Excel-no-Piloto-Automatico.pdf', [1, 2, 5, 6, 41, 42, 46]],
   app: ['app-com-ia/entrega/Do-Zero-ao-App-com-IA.pdf', [1, 5, 7, 11, 19]],
   conta: ['conta-10-minutos/entrega/Conta-em-10-Minutos.pdf', [1, 5, 7, 16, 24, 29, 34, 36, 41, 44, 45, 49]],
 };
@@ -81,7 +81,7 @@ async function compor(b, arquivo, largura, altura, corpo, fundo = 'transparent')
 
   /* prévias soltas para a galeria de cada landing */
   const copia = (de, para) => fs.copyFileSync(path.join(TMP, `${de}.png`), para);
-  [['excel-5', 'previa-1'], ['excel-6', 'previa-2'], ['excel-40', 'previa-3']].forEach(([a, c]) => copia(a, S('excel', `${c}.png`)));
+  [['excel-5', 'previa-1'], ['excel-6', 'previa-2'], ['excel-46', 'previa-3'], ['excel-41', 'previa-bonus-1'], ['excel-42', 'previa-bonus-2']].forEach(([a, c]) => copia(a, S('excel', `${c}.png`)));
   [['app-5', 'previa-1'], ['app-7', 'previa-2'], ['app-11', 'previa-3'], ['app-19', 'previa-4']].forEach(([a, c]) => copia(a, S('app', `${c}.png`)));
   ['conta-5', 'conta-7', 'conta-16', 'conta-24', 'conta-29', 'conta-34', 'conta-36', 'conta-41', 'conta-44', 'conta-45', 'conta-49']
     .forEach((a, i) => copia(a, S('conta', `previa-${i + 1}.png`)));

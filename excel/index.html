@@ -178,6 +178,24 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
 .gi span{display:block;margin-top:10px;font-size:13.5px;font-weight:600;color:var(--soft);text-align:center}
 .hint{font-size:12.5px;font-weight:600;color:var(--soft);text-align:center;font-family:var(--fm)}
 
+/* bônus: Claude dentro do Excel */
+.bon{padding:96px 0;background:#FFF6EF;border-top:1px solid #F6D9C4;border-bottom:1px solid #F6D9C4}
+.bon .tag{color:#9A3412;background:#FFE8D6;border-color:#F6C9AE}
+.bon__g{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.bon h2{margin-top:14px;max-width:18ch}
+.bon .lead{margin-top:14px}
+.bon .lead b{color:var(--ink)}
+.bon__l{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px}
+.bon__l li{position:relative;padding-left:30px;font-size:15.5px;font-weight:500}
+.bon__l li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:#FFE8D6;color:#C2410C;font-weight:900;font-size:12px;display:grid;place-items:center}
+.bon__n{margin:18px 0 0;font-size:13.5px;color:#7C2D12;background:#FFE8D6;border-radius:8px;padding:10px 14px}
+.bon__chat{background:#fff;border:1px solid #F1D5C2;border-radius:14px;box-shadow:0 24px 50px -32px rgba(0,0,0,.35);overflow:hidden}
+.bon__h{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid #F4E3D7;font-size:13px;font-weight:700;color:#7C2D12;background:#FFF9F5}
+.bon__h i{width:18px;height:18px;border-radius:5px;background:#C2410C;flex:none}
+.bon__m{margin:14px 16px;padding:12px 14px;border-radius:12px;background:#F6F3F0;font-size:14.5px;line-height:1.5}
+.bon__m--eu{background:#C2410C;color:#fff;margin-left:48px;border-bottom-right-radius:4px}
+.bon__m b{font-family:var(--fm);font-size:13px}
+
 /* receitas */
 .rec{padding:96px 0}
 .rec h2{max-width:22ch;margin:14px auto 0}
@@ -253,7 +271,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
 .prog{position:fixed;top:0;left:0;height:3px;background:var(--neon);z-index:61;width:0}
 
 @media(max-width:980px){
-  .fx__g,.big,.who__g{grid-template-columns:1fr}
+  .fx__g,.big,.who__g,.bon__g{grid-template-columns:1fr}
   .cola__g{grid-template-columns:repeat(2,1fr)}
   .pain__g,.rec__g,.small3{grid-template-columns:1fr}
 }
@@ -274,7 +292,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
   .plan__p b{font-size:54px}
   .gi--w img,.gi--p img{height:230px}
   .mbar{display:flex}
-  .fx,.pain,.cola,.inside,.rec,.offer,.faq,.final{padding-top:70px;padding-bottom:70px}
+  .fx,.pain,.cola,.inside,.rec,.offer,.faq,.final,.bon{padding-top:70px;padding-bottom:70px}
   .who{padding-bottom:70px}
 }
 @media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}.btn,.cl{transition:none}}
@@ -308,6 +326,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
       <span><b>3</b> receitas passo a passo</span>
       <span>Excel <b>2016 ao 365</b></span>
       <span>ChatGPT grátis serve</span>
+      <span><b>Bônus:</b> Claude dentro do Excel</span>
     </div>
     <div class="hero__img r" data-d="2"><img src="img/hero.png" width="1300" height="760" alt="Páginas do guia Excel no Piloto Automático e duas planilhas prontas: painel de vendas e cronograma de projeto"></div>
   </div>
@@ -378,7 +397,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
   <div class="wrap">
     <div class="center">
       <span class="tag r">O que você recebe</span>
-      <h2 class="r" data-d="1">Um guia de 44 páginas e uma pasta de planilhas prontas</h2>
+      <h2 class="r" data-d="1">Um guia de 49 páginas e uma pasta de planilhas prontas</h2>
     </div>
     <div class="big">
       <div class="card r">
@@ -429,9 +448,32 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
     <div class="gi gi--p"><img src="img/previa-2.png" alt="Página de prompts do guia" loading="lazy"><span>Prompts prontos</span></div>
     <div class="gi gi--w"><img src="img/print-crm.png" alt="CRM de clientes com funil" loading="lazy"><span>CRM de clientes</span></div>
     <div class="gi gi--w"><img src="img/print-financiamento.png" alt="Simulador de financiamento Price e SAC" loading="lazy"><span>Financiamento Price x SAC</span></div>
+    <div class="gi gi--p"><img src="img/previa-bonus-1.png" alt="Bônus: Claude dentro do Excel" loading="lazy"><span>Bônus: Claude no Excel</span></div>
     <div class="gi gi--p"><img src="img/previa-3.png" alt="Receita passo a passo" loading="lazy"><span>Receita passo a passo</span></div>
   </div>
   <p class="hint">← arraste para ver mais →</p>
+</section>
+
+<section class="bon">
+  <div class="wrap bon__g">
+    <div>
+      <span class="tag r">Bônus incluído</span>
+      <h2 class="r" data-d="1">E se o Claude mexesse na planilha por você?</h2>
+      <p class="lead r" data-d="2">O guia ensina a ligar o Claude <b>dentro do Excel</b>. Ele abre num painel ao lado da planilha, lê todas as abas e faz o trabalho nas células: você pede em português e vê a mudança acontecer.</p>
+      <ul class="bon__l r" data-d="3">
+        <li>Instalação em 5 passos, no Windows, no Mac e no Excel na web</li>
+        <li>Texto pronto para ele sempre responder em português, com R$ e datas do Brasil</li>
+        <li>15 pedidos prontos para testar nas 12 planilhas do kit</li>
+        <li>O que ele ainda não faz e como usar com segurança</li>
+      </ul>
+      <p class="bon__n r">Precisa de plano pago do Claude e de Excel 365, Mac ou web. Sem isso, os 120 prompts funcionam com qualquer IA grátis.</p>
+    </div>
+    <div class="bon__chat r" data-d="2" aria-label="Exemplo de pedido ao Claude dentro do Excel">
+      <div class="bon__h"><i></i>Exemplo de conversa · 04 Vendas e Comissão.xlsx</div>
+      <div class="bon__m bon__m--eu">Mude a meta da Carla para R$ 18.000 e me diga o que muda na comissão dela.</div>
+      <div class="bon__m">Alterei <b>Equipe!B7</b> de R$ 15.000 para R$ 18.000. No <b>Painel</b>, o % da meta dela caiu de 93,1% para 77,6%, abaixo de 80%. A faixa passa de 5% para 3% e a comissão vai de <b>R$ 698,00</b> para <b>R$ 418,80</b>.</div>
+    </div>
+  </div>
 </section>
 
 <section class="rec">
@@ -477,12 +519,13 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
     <div class="plan r" style="text-align:left">
       <span class="plan__tag">Acesso imediato</span>
       <ul>
-        <li><b>Guia Excel no Piloto Automático</b> (PDF, 44 páginas)</li>
+        <li><b>Guia Excel no Piloto Automático</b> (PDF, 49 páginas)</li>
         <li><b>120 prompts</b> em 13 capítulos, com a fórmula esperada</li>
         <li><b>Arquivo Word</b> com os 120 prompts para copiar</li>
         <li><b>12 planilhas prontas</b> (.xlsx) com aba “Como usar”</li>
         <li><b>Método COLA</b> para escrever seus próprios prompts</li>
         <li><b>3 receitas</b> passo a passo</li>
+        <li><b>Bônus:</b> o Claude trabalhando dentro do seu Excel, com 15 pedidos prontos</li>
       </ul>
       <div class="plan__clk">Preço de lançamento termina em <b data-clock>15:00</b></div>
       <div class="plan__p"><s>de R$ 67</s><b><small>R$</small>27</b><i>pagamento único · sem mensalidade</i></div>

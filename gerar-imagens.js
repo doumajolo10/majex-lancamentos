@@ -19,8 +19,8 @@ const png = (nome) => url(path.join(TMP, `${nome}.png`));
 /* páginas de cada PDF que viram imagem */
 const PAGINAS = {
   excel: ['excel-ia/entrega/Excel-no-Piloto-Automatico.pdf', [1, 2, 5, 6, 41, 42, 46]],
-  app: ['app-com-ia/entrega/Do-Zero-ao-App-com-IA.pdf', [1, 5, 7, 11, 19]],
-  conta: ['conta-10-minutos/entrega/Conta-em-10-Minutos.pdf', [1, 5, 7, 16, 24, 29, 34, 36, 41, 44, 45, 49]],
+  app: ['app-com-ia/entrega/Do-Zero-ao-App-com-IA.pdf', [1, 5, 6, 11, 13, 14, 22, 29]],
+  conta: ['conta-10-minutos/entrega/Conta-em-10-Minutos.pdf', [1, 3, 5, 7, 16, 24, 29, 35, 37, 41, 44, 45, 49, 50]],
 };
 for (const [prefixo, [pdf, pags]] of Object.entries(PAGINAS)) {
   execFileSync(process.execPath, [path.join(RAIZ, 'pdf-paginas.js'), path.join(RAIZ, pdf), prefixo, ...pags.map(String)], { stdio: 'pipe' });
@@ -66,7 +66,7 @@ async function compor(b, arquivo, largura, altura, corpo, fundo = 'transparent')
   ].join(''));
   /* CONTA: leque de 5 páginas */
   await compor(b, S('conta', 'hero.png'), 1300, 720, [
-    folha(png('conta-34'), { x: 80, y: 120, w: 340, giro: -13 }),
+    folha(png('conta-35'), { x: 80, y: 120, w: 340, giro: -13 }),
     folha(png('conta-24'), { x: 280, y: 90, w: 360, giro: -6.5 }),
     folha(png('conta-41'), { x: 660, y: 90, w: 360, giro: 6.5 }),
     folha(png('conta-44'), { x: 880, y: 120, w: 340, giro: 13 }),
@@ -82,9 +82,10 @@ async function compor(b, arquivo, largura, altura, corpo, fundo = 'transparent')
   /* prévias soltas para a galeria de cada landing */
   const copia = (de, para) => fs.copyFileSync(path.join(TMP, `${de}.png`), para);
   [['excel-5', 'previa-1'], ['excel-6', 'previa-2'], ['excel-46', 'previa-3'], ['excel-41', 'previa-bonus-1'], ['excel-42', 'previa-bonus-2']].forEach(([a, c]) => copia(a, S('excel', `${c}.png`)));
-  [['app-5', 'previa-1'], ['app-7', 'previa-2'], ['app-11', 'previa-3'], ['app-19', 'previa-4']].forEach(([a, c]) => copia(a, S('app', `${c}.png`)));
-  ['conta-5', 'conta-7', 'conta-16', 'conta-24', 'conta-29', 'conta-34', 'conta-36', 'conta-41', 'conta-44', 'conta-45', 'conta-49']
+  [['app-5', 'previa-1'], ['app-6', 'previa-2'], ['app-11', 'previa-3'], ['app-14', 'previa-4'], ['app-13', 'previa-5'], ['app-22', 'previa-6'], ['app-29', 'previa-7']].forEach(([a, c]) => copia(a, S('app', `${c}.png`)));
+  ['conta-5', 'conta-7', 'conta-16', 'conta-24', 'conta-29', 'conta-35', 'conta-37', 'conta-41', 'conta-44', 'conta-45', 'conta-49']
     .forEach((a, i) => copia(a, S('conta', `previa-${i + 1}.png`)));
+  copia('conta-3', S('conta', 'previa-plano.png')); copia('conta-50', S('conta', 'previa-certificado.png'));
   await b.close();
   console.log('pronto');
 })();

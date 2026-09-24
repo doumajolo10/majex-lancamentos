@@ -247,8 +247,10 @@ var META_PIXEL = "";
   qs.forEach(function(v,k){ if(/^(utm_|ttclid$|fbclid$|gclid$|src$|sck$)/.test(k)) passa.set(k,v); });
   var destino = CHECKOUT + (passa.toString() ? "?" + passa.toString() : "");
   document.querySelectorAll("[data-checkout]").forEach(function(a){
-    a.href = destino; a.target = "_blank"; a.rel = "noopener";
-    a.addEventListener("click", function(){
+    /* mesma aba: o navegador interno do TikTok/Instagram costuma ignorar links de nova aba */
+    a.href = destino;
+    a.addEventListener("click", function(e){
+      e.preventDefault(); setTimeout(function(){ location.href = destino; }, 350);
       if(window.ttq) ttq.track("InitiateCheckout",{content_name:PRODUTO,value:PRECO,currency:"BRL"});
       if(window.fbq) fbq("track","InitiateCheckout",{content_name:PRODUTO,value:PRECO,currency:"BRL"});
       if(window.gtag) gtag("event","begin_checkout",{value:PRECO,currency:"BRL",items:[{item_name:PRODUTO}]});

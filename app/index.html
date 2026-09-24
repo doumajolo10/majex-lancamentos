@@ -214,6 +214,7 @@ h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.015em}
 .plan .btn{width:100%;background:var(--roxo);color:#fff;box-shadow:0 5px 0 #4C1D95,0 14px 26px -16px rgba(0,0,0,.5)}
 .plan .btn:active{box-shadow:0 1px 0 #4C1D95}
 .plan__f{text-align:center;font-size:12.5px;color:var(--ink-soft);margin-top:12px}
+.plan__n{font-size:12.5px;line-height:1.5;color:var(--ink-soft);background:var(--light);border-radius:10px;padding:10px 12px;margin-top:12px;text-align:left}
 .guar{max-width:580px;margin:22px auto 0;display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:22px}
 .guar svg{flex:none;width:44px;height:44px}
 .guar h3{font-size:17px;margin-bottom:4px}
@@ -264,7 +265,8 @@ h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.015em}
   .hero__cta{width:100%;align-items:stretch;text-align:center}
   .steps{grid-template-columns:1fr}
   .st:last-child{grid-column:auto}
-  .chat__b{min-height:360px;padding:14px}
+  .chat{display:none}
+  .hero__img{margin-top:28px}
   .box,.plan{padding:24px 20px}
   .plan__p b{font-size:56px}
   .gi img{height:300px}
@@ -280,25 +282,25 @@ h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.015em}
 </head>
 <body>
 <div class="prog" id="prog"></div>
-<div class="top"><span class="top__x">Oferta de lançamento: </span>de R$ 97 por <b>R$ 37</b> · termina em <span class="clk" data-clock>15:00</span></div>
+<div class="top"><span class="top__x">Preço de lançamento: </span>de R$ 97 por <b>R$ 37</b> · pagamento único no Pix</div>
 
 <header class="nav" id="nav">
   <div class="wrap nav__in">
     <a href="#" class="brand"><span class="brand__b"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span><span><small>MAJEX</small>Do Zero ao App com IA</span></a>
-    <a href="#oferta" class="btn btn--sm">Quero por R$ 37</a>
+    <a href="#oferta" class="btn btn--sm" data-checkout>Quero por R$ 37</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap hero__g">
     <div>
-      <span class="tag r">IA aplicada ao desenvolvimento de sistemas</span>
-      <h1 class="r" data-d="1">Crie sistemas de verdade <span class="grad">conversando com a IA</span></h1>
-      <p class="hero__sub lead r" data-d="2">O método de 5 etapas para sair da ideia ao sistema publicado <b>sem saber programar</b>. Com 3 projetos guiados do começo ao fim, <b>44 prompts prontos</b> e o checklist de segurança que quase todo mundo esquece.</p>
+      <span class="tag r">Guia em PDF + 44 prompts prontos</span>
+      <h1 class="r" data-d="1">Tentou criar um app com IA e travou? <span class="grad">Siga estas 5 etapas.</span></h1>
+      <p class="hero__sub lead r" data-d="2">Um guia de 29 páginas com o passo a passo para sair da ideia ao app publicado, <b>sem saber programar</b>. 3 projetos guiados (agenda, CRM e estoque) e <b>44 prompts</b> para copiar no Lovable, Bolt ou ChatGPT.</p>
       <div class="hero__cta r" data-d="3">
-        <a href="#oferta" class="btn btn--lg">Quero criar meu primeiro sistema
+        <a href="#oferta" class="btn btn--lg" data-checkout>Quero o guia por R$ 37
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <span class="hero__price"><s>de R$ 97</s> por <b>R$ 37</b> · pagamento único · acesso na hora</span>
+        <span class="hero__price"><s>de R$ 97</s> por <b>R$ 37</b> no Pix · pagamento único · PDF no seu e-mail na hora · garantia de 7 dias</span>
       </div>
       <div class="chips r" data-d="4">
         <span><b>5</b> etapas</span><span><b>3</b> projetos guiados</span><span><b>44</b> prompts</span><span><b>10</b> itens de segurança</span>
@@ -472,10 +474,11 @@ h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.015em}
         <li><b>Capítulo 11:</b> sistemas para outros negócios, com modelo de proposta</li>
         <li><b>Guia de travamentos</b> e glossário sem tecniquês</li>
       </ul>
-      <div class="plan__clk">Preço de lançamento termina em <b data-clock>15:00</b></div>
+      <div class="plan__clk">Preço de lançamento</div>
       <div class="plan__p"><s>de R$ 97</s><b><small>R$</small>37</b><i>pagamento único · sem mensalidade</i></div>
       <a href="#" class="btn btn--lg" data-checkout>Quero meu acesso agora</a>
       <div class="plan__f">Pix, cartão, Google Pay ou PicPay · compra processada pela Cakto</div>
+      <p class="plan__n">Ao tocar no botão você vai para a página de pagamento da <b>Cakto</b>, que processa a compra. Ela pede nome, e-mail, celular e CPF para gerar o Pix e enviar o acesso (e soma R$ 0,99 de taxa da plataforma). O PDF chega no seu e-mail em cerca de 1 minuto.</p>
     </div>
     <div class="guar r" style="text-align:left">
       <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 7 10v12c0 11 7.3 18.6 17 22 9.7-3.4 17-11 17-22V10L24 4z" fill="#F0ABFC"/><path d="m16 24 6 6 11-12" stroke="#2A0B33" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -494,6 +497,9 @@ h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.015em}
       <div class="fq"><button class="fq__q">Serve para fazer sistemas para outras pessoas?</button><div class="fq__a"><p>Serve. O capítulo 11 mostra como combinar o escopo, montar a proposta em uma página e cuidar do sistema depois da entrega. O foco do guia é construir o sistema bem feito.</p></div></div>
       <div class="fq"><button class="fq__q">É curso em vídeo?</button><div class="fq__a"><p>Não. É um guia em PDF de 29 páginas, direto ao ponto, com um arquivo Word para copiar os prompts e as especificações.</p></div></div>
       <div class="fq"><button class="fq__q">Como eu recebo?</button><div class="fq__a"><p>Logo depois do pagamento chega um e-mail com o acesso à área de membros. Lá você baixa o PDF e o arquivo Word.</p></div></div>
+      <div class="fq"><button class="fq__q">Por que o pagamento pede CPF?</button><div class="fq__a"><p>A Cakto, plataforma que processa o pagamento, pede o CPF para gerar a cobrança no Pix e emitir o comprovante. Seus dados ficam com ela; nós não vemos nem guardamos seu cartão.</p></div></div>
+      <div class="fq"><button class="fq__q">Tem alguma taxa?</button><div class="fq__a"><p>A plataforma de pagamento soma R$ 0,99 de taxa de serviço. No Pix, o total fica R$ 37,99, uma vez só, sem mensalidade.</p></div></div>
+      <div class="fq"><button class="fq__q">Quem está vendendo?</button><div class="fq__a"><p>A MAJEX, que cria materiais práticos de IA aplicada. O pagamento e a entrega são feitos pela Cakto, com garantia de 7 dias pelo próprio sistema dela.</p></div></div>
       <div class="fq"><button class="fq__q">E se eu não gostar?</button><div class="fq__a"><p>Você tem 7 dias de garantia. Pediu o reembolso dentro do prazo, recebe o valor de volta.</p></div></div>
     </div>
   </div>
@@ -503,20 +509,19 @@ h3{font-size:clamp(18px,2vw,21px);letter-spacing:-.015em}
   <div class="wrap">
     <h2 class="r">A ferramenta você já tem. Falta o método.</h2>
     <p class="r" data-d="1">5 etapas, 3 projetos guiados e 44 prompts prontos. Por R$ 37, uma vez só.</p>
-    <a href="#" class="btn btn--lg r" data-d="2" data-checkout>Quero criar meu primeiro sistema</a>
+    <a href="#" class="btn btn--lg r" data-d="2" data-checkout>Quero o guia por R$ 37</a>
     <p class="final__m">Garantia de 7 dias · acesso imediato por e-mail</p>
   </div>
 </section>
 
 <footer class="foot"><div class="wrap">MAJEX · Do Zero ao App com IA<br>Os nomes de ferramentas citados pertencem aos seus donos. Este material não é afiliado a nenhuma delas.</div></footer>
 
-<div class="mbar" id="mbar"><div><b>R$ 37</b><span>termina em <span data-clock>15:00</span></span></div><a href="#" class="btn btn--sm" data-checkout>Quero agora</a></div>
+<div class="mbar" id="mbar"><div><b>R$ 37</b><span>no Pix · pagamento único</span></div><a href="#" class="btn btn--sm" data-checkout>Quero agora</a></div>
 
 <script>
 /* ===== CONFIGURAÇÃO ===== */
 var CHECKOUT = "https://pay.cakto.com.br/or8fdfq";
 var PRECO = 37, PRODUTO = "Do Zero ao App com IA";
-var MINUTOS_DA_OFERTA = 15, CHAVE_OFERTA = "majex_app_fim_oferta";
 var TIKTOK_PIXEL = "DAQ49UJC77U1JKBFUR2G";   /* pixel "MAJEX - Sites" (Events Manager do TikTok) */
 var GOOGLE_TAG = "AW-18470251762";   /* tag do Google Ads (conta 622-986-8680) */
 var META_PIXEL = "";
@@ -553,13 +558,6 @@ var META_PIXEL = "";
     });
   });
 
-  var clocks = document.querySelectorAll("[data-clock]"), alvo;
-  function novo(){ alvo = Date.now() + MINUTOS_DA_OFERTA*6e4; try{ localStorage.setItem(CHAVE_OFERTA,String(alvo)); }catch(e){} }
-  try{ alvo = Number(localStorage.getItem(CHAVE_OFERTA)); if(!alvo || alvo - Date.now() > MINUTOS_DA_OFERTA*6e4) novo(); }catch(e){ novo(); }
-  function pad(n){ return String(n).padStart(2,"0"); }
-  function tick(){ var d = alvo - Date.now(); if(d <= 0){ novo(); d = alvo - Date.now(); }
-    var t = pad(Math.floor(d/6e4)) + ":" + pad(Math.floor(d/1e3)%60); clocks.forEach(function(c){ c.textContent = t; }); }
-  tick(); setInterval(tick,1000);
 
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("is-in"); io.unobserve(e.target); } }); },
     {threshold:.12, rootMargin:"0px 0px -6% 0px"});

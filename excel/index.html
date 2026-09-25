@@ -51,7 +51,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
   border-radius:5px;padding:2px 8px;margin-left:4px;font-variant-numeric:tabular-nums}
 
 /* nav */
-.nav{position:fixed;top:37px;left:0;right:0;z-index:50;padding:12px 0;transition:background .35s var(--ease),border-color .35s;border-bottom:1px solid transparent}
+.nav{position:fixed;top:36px;left:0;right:0;z-index:50;padding:12px 0;transition:background .35s var(--ease),border-color .35s;border-bottom:1px solid transparent}
 .nav.is-stuck{background:#0F2A1E;border-bottom-color:rgba(255,255,255,.08)}
 .nav__in{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:16px;letter-spacing:-.01em}
@@ -285,7 +285,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
   .wrap{padding:0 16px}
   .top{font-size:12px;padding:8px 10px}
   .top__x{display:none}
-  .nav{top:37px}
+  .nav{top:32px} /* colado na faixa de preço (32px no celular); com 37px sobrava um vão */
   .nav .btn--sm{display:none}
   .hero{padding:124px 0 0}
   .btn--lg{width:100%;padding:18px 20px;font-size:17px}
@@ -330,7 +330,7 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
       <span><b>12</b> planilhas .xlsx</span>
       <span>ChatGPT grátis serve</span>
     </div>
-    <div class="hero__img r" data-d="2"><img src="img/hero.png" width="1300" height="760" alt="Páginas do guia Excel no Piloto Automático e duas planilhas prontas: painel de vendas e cronograma de projeto"></div>
+    <div class="hero__img r" data-d="2"><img src="img/hero.webp" srcset="img/hero.webp 1300w, img/hero-2x.webp 2600w" sizes="(max-width: 1112px) calc(100vw - 32px), 1080px" width="1300" height="760" alt="Páginas do guia Excel no Piloto Automático e duas planilhas prontas: painel de vendas e cronograma de projeto"></div>
   </div>
 </section>
 
@@ -442,16 +442,16 @@ h3{font-size:clamp(18px,2vw,21px);font-weight:700;letter-spacing:-.01em}
     <h2 class="r" data-d="1">Prints reais das planilhas e das páginas do guia</h2>
   </div>
   <div class="gal__track" id="gal">
-    <div class="gi gi--w"><img src="img/print-vendas.png" alt="Painel de vendas com meta, comissão e ranking" loading="lazy"><span>Vendas e comissão</span></div>
-    <div class="gi gi--w"><img src="img/print-gantt.png" alt="Cronograma Gantt com barras automáticas" loading="lazy"><span>Cronograma Gantt</span></div>
-    <div class="gi gi--p"><img src="img/previa-1.png" alt="Página do guia" loading="lazy"><span>Página do guia</span></div>
-    <div class="gi gi--w"><img src="img/print-financeiro.png" alt="Controle financeiro pessoal" loading="lazy"><span>Controle financeiro</span></div>
-    <div class="gi gi--w"><img src="img/print-estoque.png" alt="Controle de estoque com aviso de repor" loading="lazy"><span>Estoque com aviso de REPOR</span></div>
-    <div class="gi gi--p"><img src="img/previa-2.png" alt="Página de prompts do guia" loading="lazy"><span>Prompts prontos</span></div>
-    <div class="gi gi--w"><img src="img/print-crm.png" alt="CRM de clientes com funil" loading="lazy"><span>CRM de clientes</span></div>
-    <div class="gi gi--w"><img src="img/print-financiamento.png" alt="Simulador de financiamento Price e SAC" loading="lazy"><span>Financiamento Price x SAC</span></div>
-    <div class="gi gi--p"><img src="img/previa-bonus-1.png" alt="Bônus: Claude dentro do Excel" loading="lazy"><span>Bônus: Claude no Excel</span></div>
-    <div class="gi gi--p"><img src="img/previa-3.png" alt="Receita passo a passo" loading="lazy"><span>Receita passo a passo</span></div>
+    <div class="gi gi--w"><img src="img/print-vendas.webp" alt="Painel de vendas com meta, comissão e ranking" loading="lazy"><span>Vendas e comissão</span></div>
+    <div class="gi gi--w"><img src="img/print-gantt.webp" alt="Cronograma Gantt com barras automáticas" loading="lazy"><span>Cronograma Gantt</span></div>
+    <div class="gi gi--p"><img src="img/previa-1.webp" alt="Página do guia" loading="lazy"><span>Página do guia</span></div>
+    <div class="gi gi--w"><img src="img/print-financeiro.webp" alt="Controle financeiro pessoal" loading="lazy"><span>Controle financeiro</span></div>
+    <div class="gi gi--w"><img src="img/print-estoque.webp" alt="Controle de estoque com aviso de repor" loading="lazy"><span>Estoque com aviso de REPOR</span></div>
+    <div class="gi gi--p"><img src="img/previa-2.webp" alt="Página de prompts do guia" loading="lazy"><span>Prompts prontos</span></div>
+    <div class="gi gi--w"><img src="img/print-crm.webp" alt="CRM de clientes com funil" loading="lazy"><span>CRM de clientes</span></div>
+    <div class="gi gi--w"><img src="img/print-financiamento.webp" alt="Simulador de financiamento Price e SAC" loading="lazy"><span>Financiamento Price x SAC</span></div>
+    <div class="gi gi--p"><img src="img/previa-bonus-1.webp" alt="Bônus: Claude dentro do Excel" loading="lazy"><span>Bônus: Claude no Excel</span></div>
+    <div class="gi gi--p"><img src="img/previa-3.webp" alt="Receita passo a passo" loading="lazy"><span>Receita passo a passo</span></div>
   </div>
   <p class="hint">← arraste para ver mais →</p>
 </section>

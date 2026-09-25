@@ -7,7 +7,7 @@ const [site, n] = [process.argv[2], Number(process.argv[3])];
   await p.setViewport({ width: 1400, height: 520 });
   const dir = path.join(__dirname, site, 'img').split(path.sep).join('/');
   const html = '<body style="margin:0;display:flex;gap:6px;flex-wrap:wrap;background:#ccc">' +
-    Array.from({ length: n }, (_, i) => `<div style="text-align:center;font:bold 14px Arial"><img src="file:///${dir}/previa-${i + 1}.png" style="height:230px;display:block">${i + 1}</div>`).join('') + '</body>';
+    Array.from({ length: n }, (_, i) => `<div style="text-align:center;font:bold 14px Arial"><img src="file:///${dir}/previa-${i + 1}.webp" style="height:230px;display:block">${i + 1}</div>`).join('') + '</body>';
   const t = path.join(os.tmpdir(), '_folha.html');
   fs.writeFileSync(t, html);
   await p.goto('file:///' + t.split(path.sep).join('/'));

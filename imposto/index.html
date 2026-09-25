@@ -25,7 +25,7 @@ h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.1;letter-spacing:-.0
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .w{max-width:1140px;margin:0 auto;padding:0 20px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--verde);color:#fff;text-decoration:none;font-weight:700;border-radius:14px;padding:16px 26px;font-size:17px;box-shadow:0 10px 22px -12px rgba(5,20,45,.45),inset 0 -2px 0 rgba(0,0,0,.14);transition:transform .15s,background .15s;border:0;cursor:pointer;text-align:center;line-height:1.25}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--verde);color:#fff;text-decoration:none;font-weight:700;border-radius:14px;padding:16px 26px;font-size:17px;box-shadow:0 10px 22px -12px rgba(0,0,0,.28),inset 0 -2px 0 rgba(0,0,0,.14);transition:transform .15s,background .15s;border:0;cursor:pointer;text-align:center;line-height:1.25}
 .btn:hover{transform:translateY(-2px);background:var(--verde2)}
 .btn svg{flex:none}
 .btn--lg{padding:20px 30px;font-size:19px;width:100%;max-width:480px}
@@ -73,6 +73,29 @@ a{color:inherit}
 .lei .w{display:flex;gap:10px 26px;flex-wrap:wrap;justify-content:center;padding:14px 20px;font-size:13.5px;color:var(--suave)}
 .lei b{color:var(--azul)}
 
+/* ---------- diagnóstico ---------- */
+.diag-sec{background:var(--fundo);padding:70px 0}
+.diag{max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--linha);border-radius:24px;padding:34px;box-shadow:0 30px 60px -40px rgba(11,37,69,.4)}
+.diag-cab h2{font-size:clamp(28px,4vw,38px);margin:10px 0 8px}
+.diag-cab p{color:var(--suave)}
+.diag-form{display:grid;gap:22px;margin-top:26px}
+.diag-form fieldset{border:0;display:flex;flex-wrap:wrap;gap:10px}
+.diag-form fieldset[hidden]{display:none}
+.diag-form legend{font-weight:700;font-size:16.5px;margin-bottom:12px;width:100%}
+.diag-form label{position:relative;cursor:pointer}
+.diag-form input{position:absolute;opacity:0;width:1px;height:1px}
+.diag-form label span{display:inline-flex;align-items:center;min-height:46px;padding:10px 16px;border:1.5px solid var(--linha);border-radius:12px;font-size:15.5px;font-weight:500;background:#fff;transition:border-color .15s,background .15s}
+.diag-form label:hover span{border-color:#B9CBE0}
+.diag-form input:checked + span{border-color:var(--verde);background:#E6F7EF;color:var(--verde2);font-weight:700}
+.diag-form input:focus-visible + span{outline:3px solid rgba(14,122,85,.35);outline-offset:2px}
+.diag-res{margin-top:28px;border-top:1px dashed var(--linha);padding-top:24px}
+.diag-res h3{font-size:24px;margin-bottom:12px}
+.diag-res ul{list-style:none;display:grid;gap:12px;margin-bottom:16px}
+.diag-res li{padding:14px 16px 14px 46px;position:relative;background:var(--fundo);border-radius:14px;font-size:16px}
+.diag-res li::before{content:"";position:absolute;left:16px;top:17px;width:18px;height:18px;border-radius:50%;background:var(--verde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.5'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.diag-res li small{display:block;color:var(--suave);font-size:13.5px;margin-top:3px}
+.diag-nota{font-size:13.5px;color:var(--suave);margin-bottom:18px}
+
 /* ---------- mudanças 2026 ---------- */
 .mud{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
 .mud div{background:#fff;border:1px solid var(--linha);border-radius:var(--r);padding:24px;box-shadow:0 1px 0 rgba(11,37,69,.03),0 18px 36px -28px rgba(11,37,69,.35);position:relative;overflow:hidden}
@@ -99,7 +122,7 @@ a{color:inherit}
 .casos .tag{color:var(--menta)}
 .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
 .caso{background:linear-gradient(180deg,#143563,#11305A);border:1px solid #23497D;border-radius:var(--r);padding:26px;display:flex;flex-direction:column}
-.caso small{font-weight:700;letter-spacing:.12em;font-size:11.5px;color:var(--menta)}
+.caso small{font-weight:700;letter-spacing:.12em;font-size:12.5px;color:var(--menta)}
 .caso h3{font-size:22px;margin:8px 0 10px}
 .caso p{font-size:15px;color:#C9D8EB;flex:1}
 .caso .num{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed #33629B;margin-top:16px;padding-top:14px}
@@ -145,10 +168,10 @@ a{color:inherit}
 .sum .p3 li::before{background:var(--roxo)}
 
 /* ---------- entrega ---------- */
-.ent{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+.ent{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
 .ent > div{border:1px solid var(--linha);border-radius:var(--r);background:#fff;overflow:hidden;display:flex;flex-direction:column}
-.ent .vis{height:210px;background:var(--fundo);display:grid;place-items:center;border-bottom:1px solid var(--linha);overflow:hidden;padding:14px}
-.ent .vis img{max-height:190px;width:auto}
+.ent .vis{height:260px;background:var(--fundo);display:grid;place-items:center;border-bottom:1px solid var(--linha);overflow:hidden;padding:14px}
+.ent .vis img{max-height:240px;width:auto}
 .ent .vis.doc{background:linear-gradient(180deg,#F5F8FC,#EDF2F9)}
 .ent .txt{padding:22px 24px 26px}
 .ent .fmt{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--verde)}
@@ -210,6 +233,7 @@ footer p{margin-bottom:10px;max-width:900px}
 .r.is-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
+@media (max-width:1140px){.ent{grid-template-columns:1fr 1fr}}
 @media (max-width:960px){
   body{font-size:16.5px}
   .hero{padding:34px 0 48px}
@@ -225,6 +249,7 @@ footer p{margin-bottom:10px;max-width:900px}
   .sec{padding:66px 0}
   .nav .btn{display:none}
   .card .corpo{padding:28px 22px}
+  .diag{padding:26px 20px;border-radius:20px}
 }
 @media (max-width:440px){.mud{grid-template-columns:1fr}.hero h1{font-size:40px}.preco b{font-size:42px}}
 </style>
@@ -238,7 +263,7 @@ footer p{margin-bottom:10px;max-width:900px}
     <div class="h-top">
       <span class="selo"><i></i>Atualizado com as regras de 2026</span>
       <h1>Pague o imposto certo. <span>Nem um real a mais.</span></h1>
-      <p class="sub">O guia prático + calculadora para <b>pessoa física</b> e <b>pequeno empresário</b> usarem tudo o que a lei permite — com a conta aberta e a fonte oficial de cada número.</p>
+      <p class="sub">Guia prático, calculadora e <b>simulador no celular</b> para <b>pessoa física</b> e <b>pequeno empresário</b> usarem tudo o que a lei permite — com a conta aberta e a fonte oficial de cada número.</p>
     </div>
     <div class="h-img"><img src="img/hero.webp" srcset="img/hero-880.webp 880w, img/hero.webp 1760w" sizes="(max-width: 960px) 100vw, 560px" fetchpriority="high" alt="Capa do guia Imposto Menor, Dentro da Lei, uma página com o caso completa x simplificada e a calculadora aberta mostrando a diferença de R$ 5.744,82" width="880" height="906"></div>
     <div class="h-bot">
@@ -266,6 +291,52 @@ footer p{margin-bottom:10px;max-width:900px}
   <div><b>6</b><span>calculadoras no Excel</span></div>
 </div></div>
 <div class="lei"><div class="w"><span>Baseado na <b>Lei 15.270/2025</b></span><span><b>LC 123/2006</b> (Simples e MEI)</span><span><b>LC 214/2025</b> (reforma)</span><span><b>Perguntas e Respostas IRPF 2026</b> da Receita</span></div></div>
+
+<section class="sec diag-sec" id="diagnostico">
+  <div class="w">
+    <div class="diag">
+      <div class="diag-cab">
+        <span class="tag">Diagnóstico rápido · grátis</span>
+        <h2>O que mudou para você em 2026?</h2>
+        <p>Três perguntas, 20 segundos. Nada é enviado: a resposta aparece aqui mesmo.</p>
+      </div>
+      <form id="diagForm" class="diag-form" onsubmit="return false">
+        <fieldset><legend>1. Você é…</legend>
+          <label><input type="radio" name="perfil" value="clt"><span>Assalariado ou aposentado</span></label>
+          <label><input type="radio" name="perfil" value="aut"><span>Autônomo ou recebo aluguel</span></label>
+          <label><input type="radio" name="perfil" value="emp"><span>Tenho empresa</span></label>
+        </fieldset>
+        <fieldset data-para="clt aut"><legend>2. Sua renda tributável por mês, somando tudo</legend>
+          <label><input type="radio" name="renda" value="ate5"><span>Até R$ 5 mil</span></label>
+          <label><input type="radio" name="renda" value="ate7"><span>De R$ 5 mil a R$ 7.350</span></label>
+          <label><input type="radio" name="renda" value="mais"><span>Acima de R$ 7.350</span></label>
+        </fieldset>
+        <fieldset data-para="emp" hidden><legend>2. Sua empresa está no…</legend>
+          <label><input type="radio" name="regime" value="mei"><span>MEI</span></label>
+          <label><input type="radio" name="regime" value="simples"><span>Simples Nacional</span></label>
+          <label><input type="radio" name="regime" value="presumido"><span>Lucro Presumido</span></label>
+          <label><input type="radio" name="regime" value="nsei"><span>Não sei</span></label>
+        </fieldset>
+        <fieldset data-para="clt aut"><legend>3. Você guarda recibos de saúde e escola?</legend>
+          <label><input type="radio" name="recibos" value="sim"><span>Sim, todos</span></label>
+          <label><input type="radio" name="recibos" value="alguns"><span>Alguns</span></label>
+          <label><input type="radio" name="recibos" value="nao"><span>Não</span></label>
+        </fieldset>
+        <fieldset data-para="emp" hidden><legend>3. Como você tira dinheiro da empresa?</legend>
+          <label><input type="radio" name="retira" value="pl"><span>Só pró-labore</span></label>
+          <label><input type="radio" name="retira" value="lucros"><span>Pró-labore e lucros</span></label>
+          <label><input type="radio" name="retira" value="nsei"><span>Não sei direito</span></label>
+        </fieldset>
+      </form>
+      <div class="diag-res" id="diagRes" aria-live="polite" hidden>
+        <h3>O que se aplica a você</h3>
+        <ul id="diagLista"></ul>
+        <p class="diag-nota">Orientação geral com as regras de setembro de 2026, não é cálculo do seu caso. O guia mostra a conta completa e a calculadora faz com os seus números.</p>
+        <a href="#oferta" class="btn btn--lg" data-checkout>Quero o guia + a calculadora</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="sec">
   <div class="w">
@@ -360,6 +431,7 @@ footer p{margin-bottom:10px;max-width:900px}
   <div class="gal" id="gal">
     <figure><button type="button" data-zoom="img/pag-capa.webp"><img src="img/pag-capa.webp" alt="Capa do guia" loading="lazy" width="700" height="990"></button><figcaption>Capa · edição 2026</figcaption></figure>
     <figure><button type="button" data-zoom="img/pag-sumario.webp"><img src="img/pag-sumario.webp" alt="Sumário do guia" loading="lazy" width="700" height="990"></button><figcaption>Sumário: 15 capítulos em 3 partes</figcaption></figure>
+    <figure><button type="button" data-zoom="img/pag-capitulo.webp"><img src="img/pag-capitulo.webp" alt="Abertura de capítulo com o resumo em 30 segundos" loading="lazy" width="700" height="990"></button><figcaption>Cada capítulo abre com o resumo em 30 segundos</figcaption></figure>
     <figure><button type="button" data-zoom="img/pag-redutor.webp"><img src="img/pag-redutor.webp" alt="Página sobre o redutor de 2026" loading="lazy" width="700" height="990"></button><figcaption>O que mudou em 2026, com tabela</figcaption></figure>
     <figure><button type="button" data-zoom="img/pag-completa.webp"><img src="img/pag-completa.webp" alt="Página completa x simplificada" loading="lazy" width="700" height="990"></button><figcaption>Completa x simplificada</figcaption></figure>
     <figure><button type="button" data-zoom="img/pag-fatorr.webp"><img src="img/pag-fatorr.webp" alt="Página do caso Fator R" loading="lazy" width="700" height="990"></button><figcaption>Fator R, com o caso aberto</figcaption></figure>
@@ -384,8 +456,9 @@ footer p{margin-bottom:10px;max-width:900px}
 <section class="sec" style="background:var(--fundo)">
   <div class="w">
     <span class="tag r">O que você recebe</span>
-    <h2 class="r">Guia, calculadora e o roteiro para o contador</h2>
+    <h2 class="r">Simulador, guia, calculadora e o roteiro para o contador</h2>
     <div class="ent">
+      <div class="r"><div class="vis"><img src="img/prod-simulador.webp" alt="Simulador online aberto no celular" loading="lazy" width="380" height="690"></div><div class="txt"><span class="fmt">NO CELULAR</span><b>Simulador online</b><p>Responda perguntas simples e veja na hora quanto você paga em cada caminho. No fim, ele monta o seu plano de ação com prazos. Mesmas contas do guia.</p></div></div>
       <div class="r"><div class="vis"><img src="img/prod-guia.webp" alt="Capa do guia em PDF" loading="lazy" width="380" height="470"></div><div class="txt"><span class="fmt">PDF</span><b>Guia de 41 páginas</b><p>15 capítulos, 9 casos com a conta aberta, calendário do ano, glossário e a fonte oficial de cada número.</p></div></div>
       <div class="r"><div class="vis"><img src="img/prod-calc.webp" alt="Calculadora aberta no Excel" loading="lazy" width="600" height="345"></div><div class="txt"><span class="fmt">EXCEL</span><b>Calculadora com 6 abas</b><p>Completa x simplificada, IR do mês, PGBL, Simples x Presumido, pró-labore x lucros e limite do MEI. Abre no Excel e no Google Planilhas, até no celular.</p></div></div>
       <div class="r"><div class="vis doc"><div class="docmock" aria-hidden="true"><strong>Perguntas para o contador</strong><span>Qual declaração compensa para mim?</span><span>Meu anexo do Simples está certo?</span><span>O Fator R vale no meu caso?</span></div></div><div class="txt"><span class="fmt">WORD</span><b>Perguntas para o contador</b><p>Checklist para imprimir: o que perguntar sobre a sua declaração, o seu regime e as mudanças de 2026.</p></div></div>
@@ -419,7 +492,8 @@ footer p{margin-bottom:10px;max-width:900px}
       <div class="corpo">
         <h3>Imposto Menor, Dentro da Lei · edição 2026</h3>
         <ul>
-          <li>Guia em PDF com 15 capítulos e 9 casos</li>
+          <li>Simulador online no celular, com o seu plano de ação</li>
+          <li>Guia em PDF com 15 capítulos e 9 casos, cada um com resumo e "faça agora"</li>
           <li>Calculadora com 6 abas (Excel e Google Planilhas)</li>
           <li>Checklist de perguntas para o contador (Word)</li>
           <li>Regras de 2026: imposto zero até R$ 5 mil por mês, dividendos, imposto mínimo, reforma e o novo prazo do Simples</li>
@@ -443,7 +517,7 @@ footer p{margin-bottom:10px;max-width:900px}
       <div class="fq"><button class="fq__q">Substitui o meu contador?</button><div class="fq__a">Não, e nem é essa a ideia. O guia faz você entender as regras e chegar ao contador com os números e as perguntas certas. Decisões como mudar de regime ou montar holding devem ser feitas com ele.</div></div>
       <div class="fq"><button class="fq__q">Está atualizado?</button><div class="fq__a">Sim, com a legislação vigente em setembro de 2026: Lei 15.270/2025 (imposto zero até R$ 5 mil por mês, imposto mínimo e dividendos), a mudança do prazo de opção pelo Simples para setembro, LC 224/2025, LC 214/2025 e LC 227/2026. Temas ainda em discussão no Judiciário aparecem sinalizados.</div></div>
       <div class="fq"><button class="fq__q">Serve para MEI?</button><div class="fq__a">Sim. Há um capítulo sobre o limite do MEI, o que acontece ao estourar e a hora de sair, e uma aba da calculadora que projeta o seu faturamento do ano.</div></div>
-      <div class="fq"><button class="fq__q">Funciona no celular?</button><div class="fq__a">O guia é um PDF que abre em qualquer celular. A calculadora abre no Excel e no Google Planilhas — pelo aplicativo do Google Drive ela funciona no celular.</div></div>
+      <div class="fq"><button class="fq__q">Funciona no celular?</button><div class="fq__a">Sim. O simulador foi feito para o celular: você responde as perguntas e vê o resultado na hora. O guia é um PDF que abre em qualquer celular, e a calculadora abre no Excel e no Google Planilhas.</div></div>
       <div class="fq"><button class="fq__q">Tem vínculo com a Receita Federal?</button><div class="fq__a">Não. É um material educativo independente da MAJEX. Não fazemos declaração, não prometemos restituição e não temos nenhuma relação com órgão público.</div></div>
       <div class="fq"><button class="fq__q">Por que o checkout pede CPF e cobra R$ 0,99?</button><div class="fq__a">A Cakto, plataforma que processa o pagamento, exige CPF para emitir o Pix e a nota, e soma uma taxa de serviço de R$ 0,99. O vendedor é a MAJEX.</div></div>
       <div class="fq"><button class="fq__q">E se eu não gostar?</button><div class="fq__a">Você tem 7 dias de garantia. Pede o reembolso pela própria Cakto ou pelo e-mail contapb133@gmail.com e recebe 100% do valor de volta.</div></div>
@@ -522,6 +596,56 @@ var META_PIXEL = "";
       document.querySelectorAll(".fq.is-open").forEach(function(o){ o.classList.remove("is-open"); });
       if(!aberto) it.classList.add("is-open");
     });
+  });
+
+  /* diagnóstico rápido: só orientação geral, com as regras do guia; nada sai do navegador */
+  var DIAG = {
+    renda: {
+      ate5: ["Em 2026, o imposto retido sobre até R$ 5 mil de rendimento no mês passou a ser zero.", "Com mais de uma renda, a declaração soma tudo: pode sobrar imposto a pagar em 2027. O capítulo 2 mostra a conta."],
+      ate7: ["Você está na faixa em que o redutor de 2026 diminui o imposto aos poucos.", "Cada dedução legal pesa mais do que parece: o capítulo 3 mostra quando a completa compensa."],
+      mais: ["Na sua faixa não há redutor, então deduções legais e PGBL fazem mais diferença.", "Capítulos 3 a 5: completa x simplificada, deduções e PGBL do jeito certo."]
+    },
+    recibos: {
+      sim: ["Com os recibos guardados, compare completa x simplificada: no exemplo do guia, a família paga R$ 5.744,82 a menos na completa."],
+      alguns: ["Recibo que falta é dedução perdida. O capítulo 4 lista o que vale e o comprovante que a Receita pede."],
+      nao: ["Sem recibos, a declaração tende a cair na simplificada. No exemplo do guia, isso custou R$ 5.744,82 no ano."]
+    },
+    aut: ["Aluguel recebido de pessoa física: IPTU, condomínio e taxa da imobiliária pagos pelo dono saem da base (capítulo 7)."],
+    regime: {
+      mei: ["Limite do MEI: R$ 81 mil por ano. Passar mais de 20% do limite faz o desenquadramento voltar a janeiro (capítulo 9)."],
+      simples: ["A opção pelo Simples para 2027 é de 1º a 30/09/2026.", "Serviço no Anexo V? O Fator R pode levar a empresa para o Anexo III (capítulo 10)."],
+      presumido: ["Vale comparar com o Simples e o Fator R todo ano, em agosto (capítulos 10 e 11)."],
+      nsei: ["O capítulo 8 mostra como a atividade e o faturamento definem o regime mais barato."]
+    },
+    retira: {
+      pl: ["Tirar tudo como pró-labore costuma pagar mais INSS e IR. No exemplo do guia (empresa no Lucro Presumido), a diferença é de R$ 12.467,19 por mês (capítulo 12)."],
+      lucros: ["Lucros acima de R$ 50 mil por mês da mesma empresa passaram a ter 10% retidos na fonte (capítulo 12)."],
+      nsei: ["Pró-labore paga INSS e IR; lucro distribuído, em regra, não. O capítulo 12 mostra as condições para isso ser legal."]
+    }
+  };
+  var fDiag = document.getElementById("diagForm"), resDiag = document.getElementById("diagRes"), listaDiag = document.getElementById("diagLista"), jaMarcou = false;
+  function valDiag(n){ var e = fDiag.querySelector('input[name="' + n + '"]:checked'); return e ? e.value : ""; }
+  fDiag.addEventListener("change", function(){
+    var perfil = valDiag("perfil");
+    fDiag.querySelectorAll("fieldset[data-para]").forEach(function(fs){ fs.hidden = !!perfil && fs.getAttribute("data-para").split(" ").indexOf(perfil) < 0; });
+    var itens = [], pronto = false;
+    if(perfil === "emp"){
+      var rg = valDiag("regime"), rt = valDiag("retira");
+      if(rg) itens = itens.concat(DIAG.regime[rg]);
+      if(rt) itens = itens.concat(DIAG.retira[rt]);
+      pronto = !!(rg && rt);
+    } else if(perfil){
+      var rn = valDiag("renda"), rc = valDiag("recibos");
+      if(rn) itens = itens.concat(DIAG.renda[rn]);
+      if(rc) itens = itens.concat(DIAG.recibos[rc]);
+      if(perfil === "aut" && rn) itens = itens.concat(DIAG.aut);
+      pronto = !!(rn && rc);
+    }
+    if(!pronto){ resDiag.hidden = true; return; }
+    listaDiag.innerHTML = "";
+    itens.forEach(function(t){ var li = document.createElement("li"); li.textContent = t; listaDiag.appendChild(li); });
+    resDiag.hidden = false;
+    if(!jaMarcou){ jaMarcou = true; if(window.gtag) gtag("event", "diagnostico_concluido", { perfil: perfil }); }
   });
 
   /* galeria: arrastar no desktop e ampliar ao tocar */
